@@ -8,7 +8,7 @@ interface TypewriterTextProps {
 
 interface SpeechBubbleProps {
   text: string;
-  classname?: string;
+  className: string;
 }
 
 function TypewriterText({ fullText, speed = 50 }: TypewriterTextProps) {
