@@ -1,6 +1,14 @@
 import Image from "next/image";
 import React, {useState, useEffect} from 'react';
 
+interface TypewriterTextProps {
+  fullText: string;
+  speed?: number;
+}
+
+interface SpeechBubbleProps {
+  text: string;
+}
 
 function TypewriterText({ fullText, speed = 50 }) {
   const [displayedText, setDisplayedText] = useState('');
