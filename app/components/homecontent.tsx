@@ -8,9 +8,10 @@ interface TypewriterTextProps {
 
 interface SpeechBubbleProps {
   text: string;
+  className: 
 }
 
-function TypewriterText({ fullText, speed = 50 }) {
+function TypewriterText({ fullText, speed = 50 }: TypewriterTextProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
 
@@ -31,7 +32,7 @@ function TypewriterText({ fullText, speed = 50 }) {
 }
 
 // 1. Nested Component for the Speech Bubble (Modified for Horizontal Chat)
-function SpeechBubble({ text, className = "" }) {
+function SpeechBubble({ text, className = "" }: SpeechBubbleProps) {
   return (
     // The main bubble container: mr-4 for spacing from the image (on the left).
     
